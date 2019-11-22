@@ -1,0 +1,128 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        multiDexEnabled true
+        android.enforceUniquePackageName=false
+    }
+
+    productFlavors {
+        XIAOMI {
+            applicationId "com.youngmedia.android_succulentslime"
+            versionCode 10
+            versionName "1.0"
+            minSdkVersion 19
+            manifestPlaceholders = [
+                    appName                  : "多肉史莱姆",
+                    APP_ID                   : "\\02882303761518121592",
+                    PlatformCode             : "XIAOMI",
+                    PhoneBanner              : "7d067c88b4c118e256627126fee54086",
+                    PhoneInterstitial        : "8e60bb6f9a60dea7fa734c1f4260d2cf",
+                    PadBanner                : "7d067c88b4c118e256627126fee54086",
+                    PadInterstitia           : "8e60bb6f9a60dea7fa734c1f4260d2cf",
+                    CrosspromotionAppID      : "",
+                    CrosspromotionSignature  : "",
+                    RewardedAppID            : "b51a24decd8726be8751c26d8d5d4146",
+                    RewardedSignature        : "b51a24decd8726be8751c26d8d5d4146",
+
+            ]
+        }
+        GOOGLEPLAY {
+            applicationId "com.kidscrazygames.unicorncake2"
+            versionCode 18
+            versionName "1.8"
+            manifestPlaceholders = [
+                    appName                  : "美味独角兽蛋糕",
+                    PlatformCode: "GOOGLEPLAY",
+                    PhoneBanner: "ca-app-pub-7460046499845066/5516740160",
+                    PhoneInterstitial: "ca-app-pub-7460046499845066/3985000797",
+                    PadBanner: "ca-app-pub-7460046499845066/5516740160",
+                    PadInterstitia: "ca-app-pub-7460046499845066/3985000797",
+                    CrosspromotionAppID: "59e0274f2d0cce1b762f5560",
+                    CrosspromotionSignature: "b4f71a68ecc3fa58c4229ad271639db78e2a069f",
+                    RewardedAppID: "ca-app-pub-7460046499845066/5198187727",
+                    RewardedSignature: "ca-app-pub-7460046499845066/5198187727",
+
+
+            ]
+        }
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    sourceSets {
+        main{
+            java.srcDir "src/common/java"
+            res.srcDir "res"
+            jniLibs.srcDir "libs"
+            //  manifest.srcFile "AndroidManifest.xml"
+            assets.srcDir "assets"
+        }
+        // GOOGLEPLAY.java.srcDir "src/java"
+        //XIAOMI.java.srcDir "src/java"
+    }
+
+    signingConfigs {
+
+       release {
+            if (project.hasProperty("RELEASE_STORE_FILE")) {
+                storeFile file(RELEASE_STORE_FILE)
+                storePassword RELEASE_STORE_PASSWORD
+                keyAlias RELEASE_KEY_ALIAS
+                keyPassword RELEASE_KEY_PASSWORD
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (project.hasProperty("RELEASE_STORE_FILE")) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+//    task nativeLibsToJar(type: Zip, description: 'create a jar archive of the native libs') {
+//        destinationDir file("libs")
+//        baseName 'armeabi'
+//        extension 'jar'
+//        from fileTree(dir: 'libs', include: '**/*.so')
+//        into 'lib/'
+//    }
+//
+//    tasks.withType(JavaCompile) {
+//        compileTask -> compileTask.dependsOn(nativeLibsToJar)
+//    }
+    
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'  //this way we can find the .aar file in libs folder
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    GOOGLEPLAYCompile('com.google.android.gms:play-services:8.4.0')
+    compile fileTree(include: ['*.jar'], dir: 'libs/lib_coco2dx')
+    GOOGLEPLAYCompile(name: 'ads/ads', ext: 'aar')
+    XIAOMICompile(name: 'adsmi/ads', ext: 'aar')
+    compile(name: 'lib_component/component', ext: 'aar')
+    compile files('libs/lib_cocos2dx/libcocos2dx_v3.8_singleTouch.jar')
+    compile  'com.umeng.umsdk:analytics:8.0.0'
+    compile  'com.umeng.umsdk:common:2.0.0'
+    compile  'com.umeng.umsdk:utdid:1.1.5.3'
+}

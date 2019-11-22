@@ -1,0 +1,2 @@
+include ':KCG_SucculentSlime'
+project(':KCG_SucculentSlime').projectDir = new File(settingsDir, 'app')

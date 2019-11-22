@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.game.test"
+    android:installLocation="auto">
+
+    <uses-feature android:glEsVersion="0x00020000" />
+    
+    <supports-screens android:anyDensity="true"
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <!-- IAP for GP only -->
+    <!--<uses-permission android:name="com.android.vending.BILLING" />-->
+    
+    <application
+        android:name="MyApplication"
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon">
+        
+        <!-- Tell Cocos2dxActivity the name of our .so -->
+		<meta-data android:name="android.app.lib_name"
+				   android:value="cocos2dcpp" />
+		
+        <activity
+            android:name=".AppActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.FullScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- More game -->
+  <!--       <activity
+            android:name="com.common.android.moregame.MoreGamesActivityForJNI"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity> -->
+        
+<!--********************************Ads begin********************************-->
+<!--********Android Studio工程的所有广告Activity配置全部在arr包里，此处不用配*******-->
+<!--*********************************Ads end********************************-->
+        
+        <!-- Analytics  -->
+        <!--<receiver android:name="com.common.android.analytics.AnalyticsReceiver"-->
+            <!--android:exported="false"-->
+            <!--android:process=":Analytics"-->
+            <!-->-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.common.analytics.receiver"/>-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!-- Analytics end -->
+        
+        <!--&lt;!&ndash; IAP_Amazon &ndash;&gt;-->
+        <!--<receiver android:name="com.amazon.device.iap.ResponseReceiver" >-->
+            <!--<intent-filter>-->
+                <!--<action-->
+                <!--android:name="com.amazon.inapp.purchasing.NOTIFY"-->
+                <!--android:permission="com.amazon.inapp.purchasing.Permission.NOTIFY" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--&lt;!&ndash; IAP_Amazon end&ndash;&gt;-->
+        
+  
+        
+        <meta-data
+        android:name="Analytics Platform2"
+        android:value="${GoogleAnalytics_trackerID}" />
+        <!-- Google Analytics end -->
+        
+        <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+        
+        <meta-data
+        android:name="Analytics Platform1"
+        android:value="${Flurry_Key}" />
+        
+        <meta-data
+        android:name="PlatformCode"
+        android:value="${PlatformCode}" />
+        <!-- 根据自己项目使用的广告类型选择一种ID格式填写，不用的可删除 -->
+        
+        <!-- ********MoPub ads ID begin ********-->
+        <meta-data
+        android:name="Phone Banner"
+        android:value="${PhoneBanner}" />
+        <meta-data
+        android:name="Phone Interstitial"
+        android:value="${PhoneInterstitial}" />
+        
+        <meta-data
+        android:name="Pad Banner"
+        android:value="${PadBanner}" />
+        <meta-data
+        android:name="Pad Interstitial"
+        android:value="${PadInterstitia}" />
+        <meta-data
+        android:name="Crosspromotion AppID"
+        android:value="${CrosspromotionAppID}" />
+        <meta-data
+        android:name="Crosspromotion Signature"
+        android:value="${CrosspromotionSignature}" />
+        <meta-data
+        android:name="Rewarded AppID"
+        android:value="${RewardedAppID}" />
+        <meta-data
+        android:name="Rewarded Signature"
+        android:value="${RewardedSignature}" />
+        <!-- ********MoPub ads ID end******** -->
+        <meta-data
+        android:name="Analytics Platform4"
+        android:value="${Quantcast_API_Key}"/>
+         <meta-data
+            android:name="MoreGamePage"
+            android:value="${MoreGamePage}"/>
+<!-- ********DFP ads ID begin******** -->
+<!--         <meta-data -->
+<!-- 			android:name="Banner" -->
+<!-- 			android:value="your_banner_id_here" /> -->
+
+<!-- 		<meta-data -->
+<!-- 			android:name="Interstitial" -->
+<!-- 			android:value="your_interstitial_id_here" /> -->
+
+<!-- 		<meta-data -->
+<!-- 			android:name="Rect" -->
+<!-- 			android:value="your_rect_id_here" /> -->
+
+<!-- 		<meta-data -->
+<!-- 			android:name="Reward_APPID" -->
+<!-- 			android:value="your_reward_app_id_here" /> -->
+
+<!-- 		<meta-data -->
+<!-- 			android:name="Reward_SecurityToken" -->
+<!-- 			android:value="your_reward_app_security_token_here" /> -->
+    <!-- ********DFP ads ID end******** -->
+        
+        
+        <!-- Facebook SDK -->
+        <!--<meta-data-->
+        <!--android:name="com.facebook.sdk.ApplicationId"-->
+        <!--android:value="Your facebook APP ID" />-->
+        
+        <activity android:name="com.common.android.moregame.MarketMoreGame"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale"
+            android:theme="@style/Theme.AppCompat.FullScreen">
+
+        </activity>
+        <meta-data android:name="severUrl"
+            android:value="http://www.kidscrazygames.com"
+            />
+        
+        <meta-data
+        android:name="isNeedSupportOrientation"
+        android:value="yes" />
+
+    </application>
+    
+</manifest>

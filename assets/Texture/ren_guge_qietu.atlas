@@ -1,0 +1,279 @@
+
+ren_guge_qietu.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 648, 123
+  size: 131, 169
+  orig: 131, 169
+  offset: 0, 0
+  index: -1
+dress
+  rotate: false
+  xy: 819, 151
+  size: 159, 103
+  orig: 159, 103
+  offset: 0, 0
+  index: -1
+eye1_l
+  rotate: false
+  xy: 935, 104
+  size: 50, 45
+  orig: 50, 45
+  offset: 0, 0
+  index: -1
+eye1_r
+  rotate: false
+  xy: 925, 57
+  size: 51, 45
+  orig: 51, 45
+  offset: 0, 0
+  index: -1
+eye2_l
+  rotate: false
+  xy: 1346, 138
+  size: 56, 51
+  orig: 56, 51
+  offset: 0, 0
+  index: -1
+eye2_r
+  rotate: true
+  xy: 762, 65
+  size: 56, 52
+  orig: 56, 52
+  offset: 0, 0
+  index: -1
+eye3_l
+  rotate: false
+  xy: 871, 55
+  size: 52, 49
+  orig: 52, 49
+  offset: 0, 0
+  index: -1
+eye3_r
+  rotate: false
+  xy: 816, 55
+  size: 53, 49
+  orig: 53, 49
+  offset: 0, 0
+  index: -1
+eyeball1_l
+  rotate: false
+  xy: 819, 106
+  size: 56, 43
+  orig: 56, 43
+  offset: 0, 0
+  index: -1
+eyeball1_r
+  rotate: false
+  xy: 877, 106
+  size: 56, 43
+  orig: 56, 43
+  offset: 0, 0
+  index: -1
+eyebrow_l
+  rotate: false
+  xy: 980, 155
+  size: 37, 11
+  orig: 37, 11
+  offset: 0, 0
+  index: -1
+eyebrow_r
+  rotate: false
+  xy: 1019, 155
+  size: 37, 11
+  orig: 37, 11
+  offset: 0, 0
+  index: -1
+eyewhite1_l
+  rotate: false
+  xy: 376, 5
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+eyewhite1_r
+  rotate: false
+  xy: 418, 5
+  size: 40, 35
+  orig: 40, 35
+  offset: 0, 0
+  index: -1
+hair1
+  rotate: false
+  xy: 262, 42
+  size: 213, 212
+  orig: 213, 212
+  offset: 0, 0
+  index: -1
+hair2
+  rotate: false
+  xy: 2, 2
+  size: 258, 252
+  orig: 258, 252
+  offset: 0, 0
+  index: -1
+hand1_l
+  rotate: false
+  xy: 1218, 130
+  size: 47, 77
+  orig: 47, 77
+  offset: 0, 0
+  index: -1
+hand1_r
+  rotate: true
+  xy: 1267, 142
+  size: 47, 77
+  orig: 47, 77
+  offset: 0, 0
+  index: -1
+hand2_l_1
+  rotate: true
+  xy: 1899, 182
+  size: 72, 111
+  orig: 72, 111
+  offset: 0, 0
+  index: -1
+hand2_l_2
+  rotate: true
+  xy: 1556, 181
+  size: 73, 113
+  orig: 73, 113
+  offset: 0, 0
+  index: -1
+hand2_l_3
+  rotate: true
+  xy: 1104, 144
+  size: 63, 112
+  orig: 63, 112
+  offset: 0, 0
+  index: -1
+hand2_r_1
+  rotate: true
+  xy: 1786, 181
+  size: 73, 111
+  orig: 73, 111
+  offset: 0, 0
+  index: -1
+hand2_r_2
+  rotate: true
+  xy: 1671, 180
+  size: 74, 113
+  orig: 74, 113
+  offset: 0, 0
+  index: -1
+hand2_r_3
+  rotate: true
+  xy: 648, 58
+  size: 63, 112
+  orig: 63, 112
+  offset: 0, 0
+  index: -1
+hat
+  rotate: true
+  xy: 980, 168
+  size: 86, 122
+  orig: 86, 122
+  offset: 0, 0
+  index: -1
+head
+  rotate: false
+  xy: 477, 91
+  size: 169, 163
+  orig: 169, 163
+  offset: 0, 0
+  index: -1
+leg1_l
+  rotate: true
+  xy: 1104, 209
+  size: 45, 162
+  orig: 45, 162
+  offset: 0, 0
+  index: -1
+leg1_r
+  rotate: true
+  xy: 477, 43
+  size: 46, 162
+  orig: 46, 162
+  offset: 0, 0
+  index: -1
+leg2_l
+  rotate: true
+  xy: 1268, 191
+  size: 63, 142
+  orig: 63, 142
+  offset: 0, 0
+  index: -1
+leg2_r
+  rotate: true
+  xy: 1412, 192
+  size: 62, 142
+  orig: 62, 142
+  offset: 0, 0
+  index: -1
+mouth1
+  rotate: true
+  xy: 2012, 194
+  size: 60, 24
+  orig: 60, 24
+  offset: 0, 0
+  index: -1
+mouth2
+  rotate: false
+  xy: 1016, 127
+  size: 27, 26
+  orig: 27, 26
+  offset: 0, 0
+  index: -1
+mouth3_1
+  rotate: false
+  xy: 1310, 111
+  size: 30, 29
+  orig: 30, 29
+  offset: 0, 0
+  index: -1
+mouth3_2
+  rotate: false
+  xy: 323, 12
+  size: 51, 28
+  orig: 51, 28
+  offset: 0, 0
+  index: -1
+mouth4
+  rotate: false
+  xy: 262, 10
+  size: 59, 30
+  orig: 59, 30
+  offset: 0, 0
+  index: -1
+mouth5_1
+  rotate: false
+  xy: 1267, 120
+  size: 41, 20
+  orig: 41, 20
+  offset: 0, 0
+  index: -1
+mouth5_2
+  rotate: false
+  xy: 1342, 112
+  size: 40, 24
+  orig: 40, 24
+  offset: 0, 0
+  index: -1
+mouth5_3
+  rotate: false
+  xy: 987, 126
+  size: 27, 27
+  orig: 27, 27
+  offset: 0, 0
+  index: -1
+nose
+  rotate: true
+  xy: 460, 23
+  size: 17, 11
+  orig: 17, 11
+  offset: 0, 0
+  index: -1

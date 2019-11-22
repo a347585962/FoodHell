@@ -1,0 +1,9 @@
+IapId,ImgName,Range
+carnivalfairfood.unlockall,unlockall,"{1,1}"
+carnivalfairfood.decorations,flavor,"{3,6,9,12,15,18,21,24,27,30,33,36,39,42}"
+carnivalfairfood.decorations,box,"{3,6,9,12,15,18,21,24,27,30,33,36,39,42}"
+carnivalfairfood.decorations,candy,"{3,6,9,12,15,18,21,24,27,30,33,36,39,42}"
+carnivalfairfood.decorations,drink,"{3,6,9,12,15,18,21,24,27,30,33,36,39,42}"
+carnivalfairfood.decorations,fruit,"{3,6,9,12,15,18,21,24,27,30,33,36,39,42}"
+carnivalfairfood.decorations,sauce,"{3,6,9,12,15,18,21,24,27,30,33,36,39,42}"
+carnivalfairfood.decorations1,lockads,"{3,6,9,12,15,18,21,24,27,30,33,36,39,42}"
