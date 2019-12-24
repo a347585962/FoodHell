@@ -1,0 +1,82 @@
+ssh root@98.142.139.91 -p 29725
+dcqOlU1f5xyD
+
+# yum update
+# yum install python-setuptools && easy_install pip
+# pip install shadowsocks
+vi /etc/shadowsocks.json
+
+{
+"server":"97.64.104.18",
+"port_password":{
+     "8381":"pass1",
+     "8382":"pass2",
+     "8383":"pass3",
+     "8384":"pass4"
+     },
+"timeout":300,
+"method":"aes-256-cfb",
+"fast_open":true,
+"workers":1
+}
+
+ssserver -c /etc/shadowsocks.json -d start
+echo "ssserver -c /etc/shadowsocks.json -d start" >> /etc/rc.d/rc.local
+
+搬瓦工是支持Crontab的，因此不需要配置了。
+
+如果需要配置的话：
+#安装Crontabyum install vixie-cron crontabs
+
+设置开机启动Crontabchkconfig crond on
+启动Crontabservice crond start
+
+首先当然是如何启用/停用该服务
+
+//启动服务
+sudo service cron start
+//停止服务
+sudo service cron stop
+//重启服务
+sudo service cron restart
+//重新载入配置
+sudo service cron reload
+大部分的VPS计划任务默认都已经加如到了开机自启中，但是有些VPS（比如搬瓦工）就没有将其加入到开机自启中。要使用Cron我们当然要让他开机自动起来，不然每次都要手动去拉起来未免太荒唐了。
+
+将其加入到开机自启的方法也很简单，直接在 /etc/rc.d/rc.local 中加上 /sbin/service crond start 或者 sudo service cron start 即可
+
+
+
+先列一下现有的Crontab看看：
+crontab -l
+提示为 no crontab for root
+
+编辑命令：
+crontab -e
+
+按i进入编辑模式,输入
+
+30 4 * * * root /sbin/reboot
+
+表示 每天早上4：30分重启设备。按ESC 进入命令模式，输入：wq 保存退出。
+最后重启crontab，使重启功能生效
+service crond restart
+
+ssh root@104.245.47.132 -p 29267
+KPh9symrdTH3
+ssh root@67.230.184.25 -p 27471
+v9YLGUh4URQ6
+ssh root@97.64.104.18 -p 26796
+waNgNeLPLdFH
+ssh root@97.64.104.242 -p 26796
+waNgNeLPLdFH
+ssh root@97.64.104.39 -p 26796
+waNgNeLPLdFH
+ssh root@23.105.205.233 -p 26796
+waNgNeLPLdFH
+/var/log/shadowsocks.log
+ssserver -c /etc/shadowsocks.json -d restart
+
+
+0 0 * * * wget -O- 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }' > /etc/chinadns_chnroute.txt
+30 05 * * 1,2,3,4,5 sleep 5 && touch /etc/banner && reboot
